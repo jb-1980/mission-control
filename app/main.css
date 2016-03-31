@@ -1,0 +1,866 @@
+body {
+  background: #f7f7f7;
+
+  font-family: sans-serif;
+}
+
+.topic {
+  /*display: inline-block;
+
+  margin: 1em;
+
+  background-color: #efefef;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+
+  min-width: 10em;
+  vertical-align: top;*/
+}
+
+.topic-header {
+  /*overflow: auto;
+
+  padding: 1em;
+
+  color: #efefef;
+  background-color: #333;
+
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;*/
+}
+
+.topic-name {
+  border-bottom: 1px dotted #ddd;
+  color: #999;
+  line-height: 1;
+  margin: 10px 0 5px;
+  font-size: 20px;
+}
+
+.topic-name>input[type="text"] {
+  font-size: 20px;
+  background-color: inherit;
+  border: none;
+  display: block;
+  margin: 0;
+  /*width: 100%;*/
+  font-family: sans-serif;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+.topic-name>input[type="text"]:focus {
+  outline: none;
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+.topic-add-task {
+
+}
+
+.topic-delete {
+  float: right;
+  margin-left: 0.5em;
+}
+
+.add-topic {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  color: #fff;
+  border-radius: 5px;
+  background: #1c758a;
+}
+
+.topic-add-task button {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  color: #fff;
+  border-radius: 5px;
+  background: #1c758a;
+  width: 100%;
+  line-height: 34px;
+}
+
+.topic-delete button {
+  padding: 0;
+
+  cursor: pointer;
+
+  color: #444;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+}
+
+.tasks {
+  margin: 0.5em;
+  padding-left: 0;
+
+  list-style: none;
+}
+
+.task {
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+
+  background-color: #fdfdfd;
+  box-shadow: 0 0 0.3em .03em rgba(0,0,0,.3);
+}
+.task:hover {
+  box-shadow: 0 0 0.3em .03em rgba(0,0,0,.7);
+
+  transition: .6s;
+}
+
+.task .value {
+  /* force to use inline-block so that it gets minimum height */
+  display: inline-block;
+}
+
+.delete-button {
+  float: right;
+  color: #555;
+  cursor: pointer;
+}
+.delete-button:hover {
+  color: #f00;
+}
+
+.clearfix{*zoom:1}
+.clearfix:before,.clearfix:after{
+  display:table;
+  content:"";
+  line-height:0
+}
+.clearfix:after{
+  clear:both
+}
+
+.edit-icon{
+  margin-left: 5px;
+}
+
+.dashboard-root{
+  background-color: #f7f7f7;
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff7f7f7',endColorstr='#ffffffff',GradientType=0);
+}
+
+.contained-and-centered {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.clearfix{*zoom:1}
+.clearfix:before,.clearfix:after{
+  display:table;
+  content:"";
+  line-height:0
+}
+.clearfix:after{
+  clear:both
+}
+
+
+#mission-contents-container {
+  background-color: #f9f9f9;
+  background-image: linear-gradient(to right,#f7f7f7 0,#f7f7f7 50%,#fff 50%,#fff);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gra
+}
+
+.dashboard-sidebar{
+  padding-top:20px;
+}
+
+.mission-title{
+  color: #555;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1;
+  margin-left: 20px;
+}
+
+.dashboard-section-container {
+  margin-top: 20px;
+}
+
+.dashboard-section-container:first-child{
+  margin-top: 0;
+}
+
+.dashboard-sidebar .section-header{
+  border-top: 1px solid #ddd;
+}
+
+.section-header{
+  color: #555;
+  font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;
+  font-size: 14px;
+  margin-left: 20px;
+  padding: 10px 20px 10px 0;
+  text-transform: uppercase;
+}
+
+.section-header.up-next {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 0;
+    padding: 10px 0 2px;
+}
+
+.dashboard-section-content{
+  padding: 0 20px;
+}
+
+.mission-progress-container {
+  background: #f7f7f7;
+  border: 0;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px;
+  padding-bottom: 0;
+  position: relative;
+}
+
+.up-next-container, .progress-bar-container {
+  position: relative;
+  border: 0;
+}
+
+.mission-progress-icon-container {
+  text-align: center;
+}
+
+.mission-progress-icon {
+  display:inline-block;
+}
+
+.icon-surface {}
+
+.mission-progress-level-counts {
+  font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;
+  font-size: 14px;
+  display: inline-block;
+  margin-left: 30px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.mission-progress-level-counts .task-count-row {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.task-count-row__color-square{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+
+.task-count-row__color-square.mastery3{
+  color: #fdfdfd;
+  background: #1c758a;
+}
+
+.task-count-row__color-square.mastery2{
+  color: #fdfdfd;
+  background: #29abca;
+}
+
+.task-count-row__color-square.mastery1{
+  color: #fdfdfd;
+  background: #58c4dd;
+}
+
+.task-count-row__color-square.practiced{
+  color: #fdfdfd;
+  background: #9cdceb;
+}
+
+.task-count-row__color-square.unstarted{
+  color: #fdfdfd;
+  background: #ddd;
+}
+
+.mission-progress-level-counts .task-count-row .task-count-row__count-text {
+  padding-left: 10px;
+  line-height: 14px;
+  vertical-align: middle;
+}
+
+.toggle-skills-link-container {
+  text-align: center;
+}
+
+.progress-cells {
+  color: white;
+  min-height: 40px;
+  padding: 0;
+  text-align: left;
+}
+
+.progress-cells {
+  margin-top: 20px;
+}
+
+.progress-by-topic__title {
+    border-bottom: 1px dotted #ddd;
+    color: #999;
+    line-height: 1;
+    margin: 10px 0 5px;
+    font-size: 20px;
+}
+
+.progress-by-topic:first-child .progress-by-topic__title {
+    margin-top: 0;
+}
+
+.progress-by-topic .progress-cell {
+  height: 12px;
+  width: 12px;
+}
+
+.progress-cells .progress-cell {
+    border: 1px solid #fff;
+    border-width: 0 1px 1px 0;
+    cursor: pointer;
+    display: block;
+    float: left;
+    transition: all 200ms ease-in-out;
+}
+
+.progress-cell.mastery3 {
+    color: #fdfdfd;
+    background: #1c758a;
+}
+
+.progress-cell.mastery2 {
+    color: #fdfdfd;
+    background: #29abca;
+}
+
+.progress-cell.mastery1 {
+    color: #fdfdfd;
+    background: #58c4dd;
+}
+
+.progress-cell.practiced {
+    color: #fdfdfd;
+    background: #9cdceb;
+}
+
+.progress-cell.unstarted {
+    color: #fdfdfd;
+    background: #ddd;
+}
+
+.progress-cell .mastery3 {
+    color: #fdfdfd;
+    background: #1c758a;
+}
+
+.dashboard-task-list-container{
+  background-color: #fff;
+  padding-top: 20px;
+}
+
+.dashboard-task-list {
+  margin: 10px 0 0 auto;
+  max-width: 700px;
+  padding: 0 0 0 20px;
+}
+
+.dashboard-task-list-footer{
+  margin: 10px 0 0 auto;
+  max-width: 700px;
+  padding: 0 0 0 20px;
+}
+
+.math {
+  color: #fff;
+}
+
+#mastery-challenge-container {
+  border: 0;
+  height: auto;
+}
+
+.task-entry-container {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  opacity: 1;
+  position: relative;
+  transition: max-height 500ms ease;
+  max-height: none;
+}
+
+.up-next-outer-container {
+    position: relative;
+}
+
+.up-next-container{
+    position: relative;
+    border: 0;
+}
+
+
+
+.user-summary-view__points-and-badges {
+  float: none;
+  text-align: right;
+}
+
+.mobile-badges-section>div {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.energy-points-container {
+  margin: 0;
+  font-size: 12px;
+  position: relative;
+}
+
+.energy-points-badge {
+  background-color: #00b0de;
+  border-radius: 3px;
+  float: none;
+  padding: 1px 10px 0;
+  line-height: 18px;
+  text-align: center;
+  color: white;
+  font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;
+  text-shadow: none;
+}
+
+.energy-points-badge {
+    background-color: #00b0de;
+    border-radius: 3px;
+    float: none;
+    padding: 1px 10px 0;
+}
+
+.user-summary-view__points-and-badges__badges {
+  display: inline-block;
+  font-size: 12px;
+  vertical-align: baseline;
+}
+
+.profile-badge-count-container {
+    border-radius: 4px;
+    color: inherit;
+    float: none;
+    left: 10px;
+    margin-right: 5px;
+    padding: 6px 10px 6px 0;
+    position: relative;
+    text-decoration: none!important;
+}
+
+.badge-category {
+  margin-left: 5px;
+}
+
+.badge-img-small {
+    width: 13px;
+    height: 13px;
+    vertical-align: -2px;
+}
+
+#mastery-challenge {
+  box-sizing: border-box;
+  position: relative;
+  transition: all ease-in-out 50ms;
+}
+
+.info-container {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #aaa;
+    padding: 0 0 10px;
+}
+
+.task-entry-container.upcoming-task .info-container {
+    padding: 20px 0;
+}
+
+.info-container-active {
+    border-radius: 4px;
+    background-color: #1c758a;
+    color: #fdfdfd;
+}
+
+.task-preview-container {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 25px 20px;
+}
+
+.task-preview {
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    height: 60px;
+    width: 60px;
+    position: relative;
+}
+
+.task-preview__mastery {
+    background: #1c758a;
+    border-color: #29abca;
+    text-align: center;
+}
+
+.task-preview>img{
+    border-radius: 2px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.task-link {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mastery-trophy {
+  font-size: 48px;
+  position: relative;
+  line-height: 60px;
+}
+
+.mastery-task-info {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 20px 0 0;
+}
+
+.task-title {
+    color: #444;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.mastery-task-info>.task-title{
+  color: #fff;
+  line-height: 28px;
+  font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;
+  text-transform: uppercase;
+}
+
+.annotations-container {
+    margin: auto;
+}
+
+.accent-button {
+    border: 1px solid #196a7d;
+    color: #fff;
+    text-shadow: none;
+    background-color: #1a6b7e;
+    background-image: linear-gradient(to bottom,#1c758a,#165c6c);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1c758a',endColorstr='#ff165c6c',GradientType=0);
+    border-color: #165c6c #165c6c #09262d;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    color: #fff!important;
+    font-family: 'Proxima Nova Semibold','Helvetica','Corbel',sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.start-button {
+    border-radius: 15px;
+    font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;
+    font-size: 14px;
+    letter-spacing: .05em;
+    line-height: 30px;
+    margin-left: 10%;
+    min-height: 30px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 80%;
+}
+
+.start-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.recommendation-info {
+    color: #58c4dd;
+    font-size: 14px;
+    font-weight: 600;
+    min-height: 3px;
+    text-transform: uppercase;
+}
+
+.task-description {
+  color: #aaa;
+}
+
+.mastery-task-info .task-description{
+  color:#fff;
+}
+.remove-button-container {
+  display: inline-block;
+}
+
+.up-next-container .task-entry-container button {
+    cursor: pointer;
+}
+
+.task-entry-container .annotations-container .task-badge, .task-entry-container .annotations-container .start-button {
+    border-radius: 15px;
+    font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;
+    font-size: 14px;
+    letter-spacing: .05em;
+    line-height: 30px;
+    margin-left: 10%;
+    min-height: 30px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    width: 80%;
+}
+
+.task-entry-container .annotations-container .task-badge {
+    background-color: #fff;
+    display: block;
+}
+
+.task-entry-container .task-badge {
+    border-radius: 5px;
+    border: 1px solid #4fbad4;
+    color: #4fbad4;
+}
+
+.edit-info-container {
+  background: #eee;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #555;
+  border-radius: 5px;
+}
+
+.editor-task-list{
+  margin: 10px 0 0 10px;
+  max-width: 700px;
+  padding: 0 0 0 20px;
+}
+
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
+body {
+    color: #526066;
+}
+
+/*
+ * -- PURE BUTTON STYLES --
+ * I want my pure-button elements to look a little different
+ */
+.pure-button-khan {
+  color: #fff;
+  font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;
+  display: inline-block;
+  margin: auto;
+  line-height: 50px;
+  font-size: 14pt;
+  background-color: #80ac07;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  box-shadow: 4px 4px 14px #000;
+  -moz-box-shadow: 4px 4px 14px #000;
+  -webkit-box-shadow: 4px 4px 14px #000;
+  background-image: linear-gradient(to bottom, #8aba08, #719807);
+  background-repeat: repeat-x;cursor:pointer;
+}
+
+a.pure-button-khan {
+    background: #689F38;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 120%;
+}
+
+
+/*
+ * -- Layout Styles --
+ */
+.l-content {
+    margin: 0 auto;
+}
+
+.l-box {
+    padding: 0.5em 2em;
+}
+
+.is-center {
+    text-align: center;
+}
+
+/*
+ * -- MENU STYLES --
+ * Make the menu have a very faint box-shadow.
+ */
+.home-menu {
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+
+.home-menu {
+  background: #1c758a;
+}
+
+.home-menu .pure-menu-heading {
+  color: white;
+  font-weight: 400;
+  font-size: 120%;
+}
+
+.home-menu .pure-menu-selected a {
+  color: white;
+}
+
+.home-menu a {
+  color: white;
+}
+
+.home-menu .pure-menu-children a{
+  color: #555;
+}
+.home-menu li a:hover,
+.home-menu li a:focus {
+  background: white;
+  border: 1px solid #555;
+  color: #555;
+}
+
+.home-menu .pure-menu-children {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #555;
+}
+
+.home-button {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/*
+ * -- SPLASH STYLES --
+ * This is the blue top section that appears on the page.
+ */
+
+.splash-container {
+    background: #8BC34A;
+    z-index: 1;
+    overflow: hidden;
+    /* The following styles are required for the "scroll-over" effect */
+}
+
+.splash {
+    /* absolute center .splash within .splash-container */
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    top: 100px; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.splash-head {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    border: 3px solid #fff;
+    padding: 1em 1.6em;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+}
+
+.splash-subhead {
+    color: #fff;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
+/*
+ * -- CONTENT STYLES --
+ * This represents the content area (everything below the blue section)
+ */
+.content-wrapper {
+    background: #fff;
+}
+
+/* This is the class used for the main content headers (<h2>) */
+.content-head {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 2em 0 1em;
+}
+
+.content-head a {
+  text-decoration: none;
+  color: #8BC34A;
+}
+
+/* This is a modifier class used when the content-head is inside a ribbon */
+.content-head-ribbon {
+    color: white;
+}
+
+/* This is the class used for the content sub-headers (<h3>) */
+.content-subhead {
+    color: #8BC34A;
+}
+    .content-subhead i {
+        margin-right: 7px;
+    }
+
+.profile-mastery, .profile-task-link{
+  max-width: 600px;
+  margin: auto;
+}
+
+@media(min-width: 735px) {
+    .home-menu{
+      text-align: left;
+    }
+    .home-menu ul {
+      float: right;
+    }
+    .splash-head {
+      font-size: 2.5em;
+    }
+
+    .home-button {
+      line-height: 48px;
+      font-size: 24px;
+    }
+}
+
+@media (min-width: 1023px) {
+  .dashboard-root {
+    background-image: linear-gradient(to right,#f7f7f7 0,#f7f7f7 50%,#fff 50%,#fff);
+  }
+}

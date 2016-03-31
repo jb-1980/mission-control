@@ -1,0 +1,202 @@
+/*
+ * -- BASE STYLES --
+ * Most of these are inherited from Base, but I want to change a few.
+ */
+body {
+    color: #526066;
+}
+
+h2, h3 {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.6em;
+}
+
+/*
+ * -- PURE BUTTON STYLES --
+ * I want my pure-button elements to look a little different
+ */
+.pure-button-khan {
+  color: #fff;
+  font-family: 'Proxima Nova','Helvetica','Corbel',sans-serif;
+  display: inline-block;
+  margin: auto;
+  line-height: 50px;
+  font-size: 14pt;
+  background-color: #80ac07;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  box-shadow: 4px 4px 14px #000;
+  -moz-box-shadow: 4px 4px 14px #000;
+  -webkit-box-shadow: 4px 4px 14px #000;
+  background-image: linear-gradient(to bottom, #8aba08, #719807);
+  background-repeat: repeat-x;cursor:pointer;
+}
+
+a.pure-button-khan {
+    background: #689F38;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 120%;
+}
+
+
+/*
+ * -- Layout Styles --
+ */
+.l-content {
+    margin: 0 auto;
+}
+
+.l-box {
+    padding: 0.5em 2em;
+}
+
+.is-center {
+    text-align: center;
+}
+
+/*
+ * -- MENU STYLES --
+ * Make the menu have a very faint box-shadow.
+ */
+.home-menu {
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+
+.home-menu {
+  background: #1c758a;
+}
+
+.home-menu .pure-menu-heading {
+  color: white;
+  font-weight: 400;
+  font-size: 120%;
+}
+
+.home-menu .pure-menu-selected a {
+  color: white;
+}
+
+.home-menu a {
+  color: white;
+}
+
+.home-menu .pure-menu-children a{
+  color: #555;
+}
+.home-menu li a:hover,
+.home-menu li a:focus {
+  background: white;
+  border: 1px solid #555;
+  color: #555;
+}
+
+.home-menu .pure-menu-children {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #555;
+}
+
+/*
+ * -- SPLASH STYLES --
+ * This is the blue top section that appears on the page.
+ */
+
+.splash-container {
+    background: #8BC34A;
+    z-index: 1;
+    overflow: hidden;
+    /* The following styles are required for the "scroll-over" effect */
+}
+
+.splash {
+    /* absolute center .splash within .splash-container */
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    top: 100px; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.splash-head {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    border: 3px solid #fff;
+    padding: 1em 1.6em;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+}
+
+.splash-subhead {
+    color: #fff;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
+/*
+ * -- CONTENT STYLES --
+ * This represents the content area (everything below the blue section)
+ */
+.content-wrapper {
+    background: #fff;
+}
+
+/* This is the class used for the main content headers (<h2>) */
+.content-head {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 2em 0 1em;
+}
+
+.content-head a {
+  text-decoration: none;
+  color: #8BC34A;
+}
+
+/* This is a modifier class used when the content-head is inside a ribbon */
+.content-head-ribbon {
+    color: white;
+}
+
+/* This is the class used for the content sub-headers (<h3>) */
+.content-subhead {
+    color: #8BC34A;
+}
+    .content-subhead i {
+        margin-right: 7px;
+    }
+
+/*
+ * -- TABLET MEDIA QUERIES --
+ * On tablets, we want to slightly adjust the size of the banner
+ * text and add some vertical space between the various pricing tables
+ */
+@media(min-width: 767px) {
+    .home-menu{
+      text-align: left;
+    }
+    .home-menu ul {
+      float: right;
+    }
+    .splash-head {
+        font-size: 2.5em;
+    }
+}
+
+/*
+ * -- PHONE MEDIA QUERIES --
+ */
+@media (min-width: 480px) {
+}
