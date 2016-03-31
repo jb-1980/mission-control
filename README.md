@@ -8,6 +8,7 @@ With Mission Control you can create your own mission by giving it a name, creati
 
 Check out the demo:
 
+http://missioncontrol.gilgenlabs.com
 
 ##TODOS
 - [ ] Save state when editing of a mission starts so we can roll back to it if the user clicks the cancel edit button. Currently, edits are not saved when changes are made but the user has to refresh the page to roll back. But that just falls short of excellent.
