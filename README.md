@@ -15,6 +15,7 @@ http://missioncontrol.gilgenlabs.com
 - [ ] When changing color theme, there is no indication that the theme was saved. I need to give an indication.
 - [ ] When fetching data, there is no spinner or other indicator. The user may think that the site is stuck when in reality it is just busy. I need to fully implement [redux's  async actions](http://redux.js.org/docs/advanced/AsyncActions.html).
 - [ ] Implement methods to delete missions or to unjoin a mission.
+- [ ] Get the task details when hovering on a task box like in Khan Academy.
 - [ ] Extend features:
  - Monitor student progress on mission similar to Khan Academy's tools.
  - Add ability to include videos
